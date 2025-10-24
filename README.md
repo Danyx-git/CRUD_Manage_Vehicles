@@ -59,3 +59,10 @@ Permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) sobre
 
 ## 📁 Estructura del proyecto
 
+/CRUD-Vehiculos
+│
+├── index.html # Página principal / menú
+├── php/ # Carpeta con los scripts PHP
+├── css/
+│ └── styles.css # Estilos del proyecto
+└── README.md # Documentación del proyecto
