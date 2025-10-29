@@ -6,8 +6,8 @@ CREATE TABLE IF NOT EXISTS vehiculo(
     brand VARCHAR(150) NOT NULL,
     plate VARCHAR(8) NOT NULL UNIQUE,
     combustion VARCHAR(50) NOT NULL,
-    warranty TINYINT NOT NULL,
-    cleanCar TINYINT NOT NULL,
-    tracking TINYINT NOT NULL,
+    warranty BOOLEAN NOT NULL,
+    cleanCar BOOLEAN NOT NULL,
+    tracking BOOLEAN NOT NULL,
     image VARCHAR(500) NOT NULL
 );
