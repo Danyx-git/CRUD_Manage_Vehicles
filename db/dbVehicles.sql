@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS vehiculos
-USE vehiculos
+CREATE DATABASE IF NOT EXISTS db_vehicles
+USE db_vehiculos
 CREATE TABLE IF NOT EXISTS vehiculo(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	clientName VARCHAR(150) NOT NULL,
@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS vehiculo(
     warranty BOOLEAN NOT NULL,
     cleanCar BOOLEAN NOT NULL,
     tracking BOOLEAN NOT NULL,
-    image VARCHAR(500) NOT NULL
+    image VARCHAR(500)
 );
