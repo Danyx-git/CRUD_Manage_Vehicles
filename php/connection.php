@@ -4,7 +4,7 @@
   function Connection(){
 
     $host = "localhost";
-    $dbname = "bd_vehiculos";
+    $dbname = "db_vehicles";
     $user = "root";
     $pass = "";
     
