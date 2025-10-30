@@ -1,50 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* MAIN CSS */
-html,body{
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
-  font-family: "Roboto", sans-serif;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
+  background-color: #f5f6fa;
 }
 
-.main-container{
+/* MAIN CONTAINER */
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 40px 100px;
   border-radius: 10px;
-  box-shadow: 5px 5px 25px 0 rgba(124, 124, 124, 0.5);
+  box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.5);
+  background-color: #fff;
 }
 
-.main-container a{
-  font-family: "Roboto",sans-serif;
+.main-container a {
+  font-family: "Roboto", sans-serif;
   width: 250px;
   padding: 20px 50px;
   border-radius: 12px;
-  border: 0px solid transparent;
+  border: none;
   background-color: #2f3176;
   color: #fff;
   text-decoration: none;
   text-align: center;
   font-size: 14px;
-  transition: 0.3s all ease;
+  transition: all 0.3s ease;
 }
 
-.main-container a:hover{
-  transform: scale(1.02);
-  font-size: 16px;
+.main-container a:hover {
+  transform: scale(1.05);
+  font-size: 15px;
   background-color: #3b3e9c;
   cursor: pointer;
 }
 
-/*INSERT CSS*/
+/* INSERT FORM */
+.insert-form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.4);
+  width: 420px;
+  background-color: #fff;
+}
 
+.insert-form label {
+  margin: 10px 0 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.insert-form input,
+.insert-form select {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.insert-form input[type="text"],
+.insert-form input[type="file"],
+.insert-form select {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.insert-form input[type="text"]:focus,
+.insert-form select:focus {
+  border: 1px solid #007bff;
+}
+
+.insert-form input[type="radio"],
+.insert-form input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.insert-form label input[type="radio"],
+.insert-form label input[type="checkbox"] {
+  font-weight: normal;
+}
+
+.insert-form div label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.insert-form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  font-weight: 500;
+}
+
+.insert-form input[type="submit"]:hover {
+  transform: scale(1.02);
+  background-color: #0056b3;
+}

@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
   <title>Formulario del vehículo</title>
 </head>
 <body>
-  <form action="../php/insert.php" method="POST" enctype="multipart/form-data">
+  <form class="insert-form" action="../php/insert.php" method="POST" enctype="multipart/form-data">
     <!-- Nombre -->
-    <label>Nombre:</label>
-    <input type="text" name="vehicle_name" max="150" required>
+    <label for="vehicle_name">Nombre:</label>
+    <input type="text" id="vehicle_name" name="vehicle_name" maxlength="150" required>
+
     <!-- Marca -->
-    <label>Marca:</label>
-    <select name="vehicle_brand" required>
+    <label for="vehicle_brand">Marca:</label>
+    <select id="vehicle_brand" name="vehicle_brand" required>
       <option value="" hidden selected>--Seleccione una marca--</option>
       <option value="Toyota">Toyota</option>
       <option value="Ford">Ford</option>
@@ -25,101 +27,49 @@
       <option value="Mazda">Mazda</option>
       <option value="Subaru">Subaru</option>
       <option value="Jeep">Jeep</option>
-      <option value="Ram">Ram</option>
-      <option value="GMC">GMC</option>
-      <option value="Buick">Buick</option>
-      <option value="Cadillac">Cadillac</option>
-      <option value="Chrysler">Chrysler</option>
-      <option value="Dodge">Dodge</option>
-      <option value="Lincoln">Lincoln</option>
-      <option value="Acura">Acura</option>
-      <option value="Infiniti">Infiniti</option>
-      <option value="Lexus">Lexus</option>
-      <option value="Genesis">Genesis</option>
-      <option value="Volvo">Volvo</option>
+      <option value="Tesla">Tesla</option>
       <option value="BMW">BMW</option>
       <option value="Mercedes-Benz">Mercedes-Benz</option>
       <option value="Audi">Audi</option>
       <option value="Porsche">Porsche</option>
-      <option value="Mini">Mini</option>
-      <option value="Jaguar">Jaguar</option>
-      <option value="Land Rover">Land Rover</option>
-      <option value="Alfa Romeo">Alfa Romeo</option>
-      <option value="Fiat">Fiat</option>
-      <option value="Peugeot">Peugeot</option>
-      <option value="Renault">Renault</option>
-      <option value="Citroën">Citroën</option>
-      <option value="Opel">Opel</option>
-      <option value="SEAT">SEAT</option>
-      <option value="Skoda">Skoda</option>
-      <option value="Suzuki">Suzuki</option>
-      <option value="Mitsubishi">Mitsubishi</option>
-      <option value="Isuzu">Isuzu</option>
-      <option value="Daewoo">Daewoo</option>
-      <option value="Saab">Saab</option>
-      <option value="Rover">Rover</option>
-      <option value="Tesla">Tesla</option>
-      <option value="Rivian">Rivian</option>
-      <option value="Lucid">Lucid</option>
-      <option value="Polestar">Polestar</option>
-      <option value="BYD">BYD</option>
-      <option value="Geely">Geely</option>
-      <option value="Chery">Chery</option>
-      <option value="Great Wall">Great Wall</option>
-      <option value="Haval">Haval</option>
-      <option value="MG">MG</option>
-      <option value="Mahindra">Mahindra</option>
-      <option value="Tata">Tata</option>
-      <option value="Proton">Proton</option>
-      <option value="Perodua">Perodua</option>
-      <option value="Dacia">Dacia</option>
-      <option value="Lada">Lada</option>
-      <option value="Scion">Scion</option>
-      <option value="Smart">Smart</option>
-      <option value="Pagani">Pagani</option>
-      <option value="Bugatti">Bugatti</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Lexus">Lexus</option>
       <option value="Ferrari">Ferrari</option>
       <option value="Lamborghini">Lamborghini</option>
-      <option value="Maserati">Maserati</option>
-      <option value="McLaren">McLaren</option>
-      <option value="Aston Martin">Aston Martin</option>
-      <option value="Bentley">Bentley</option>
-      <option value="Rolls-Royce">Rolls-Royce</option>
-      <option value="Koenigsegg">Koenigsegg</option>
-      <option value="Lotus">Lotus</option>
-      <option value="Maybach">Maybach</option>
-      <option value="Pontiac">Pontiac</option>
-      <option value="Oldsmobile">Oldsmobile</option>
-      <option value="Saturn">Saturn</option>
-      <option value="Hummer">Hummer</option>
-      <option value="Plymouth">Plymouth</option>
-      <option value="Mercury">Mercury</option>
-      <option value="Holden">Holden</option>
-      <option value="Scania">Scania</option>
-      <option value="Freightliner">Freightliner</option>
-      <option value="Mack">Mack</option>
-      <option value="Peterbilt">Peterbilt</option>
-      <option value="Kenworth">Kenworth</option>
     </select>
+
     <!-- Matrícula -->
-    <label>Matrícula:</label>
-    <input type="text" name="vehicle_plate" required>
-    <!-- Tipo -->
-    <label>Tipo</label>
-    <select name="vehicle_combustion" required>
+    <label for="vehicle_plate">Matrícula:</label>
+    <input type="text" id="vehicle_plate" name="vehicle_plate" required>
+
+    <!-- Tipo de combustible -->
+    <label for="vehicle_combustion">Combustión:</label>
+    <select id="vehicle_combustion" name="vehicle_combustion" required>
+      <option value="" selected hidden>--Selecciona una combustión--</option>
       <option value="Gasolina">Gasolina</option>
-      <option value="Diesel">Diesel</option>
+      <option value="Diesel">Diésel</option>
       <option value="Híbrido">Híbrido</option>
       <option value="Eléctrico">Eléctrico</option>
     </select>
+
     <!-- En garantía -->
     <label>¿En garantía?</label>
-    <label><input type="radio" name="vehicle_warranty" required>Si</label>
-    <label><input type="radio" name="vehicle_warranty">No</label>
-    <!-- Limpiar vehículo -->
-    <label><input type="checkbox" name="vehicle_clean">Limpiar vehículo</label>
-    <!-- Seguimiento vehículo -->
-    <label><input type="checkbox" name="vehicle_clean">¿Quíeres recibir notificaciones del seguimiento del vehículo?</label>
+    <div>
+      <label><input type="radio" name="vehicle_warranty" value="Sí" required> Sí</label>
+      <label><input type="radio" name="vehicle_warranty" value="No"> No</label>
+    </div>
+
+    <!-- Opciones adicionales -->
+    <label>Opciones adicionales:</label>
+    <label><input type="checkbox" name="vehicle_clean"> Limpiar vehículo</label>
+    <label><input type="checkbox" name="vehicle_tracking"> ¿Recibir notificaciones del seguimiento?</label>
+
+    <!-- Imagen -->
+    <label for="vehicle_image">Imagen:</label>
+    <input type="file" id="vehicle_image" name="vehicle_image" accept="image/*">
+
+    <!-- Enviar formulario -->
+    <input type="submit" value="Registrar vehículo">
   </form>
 </body>
 </html>
