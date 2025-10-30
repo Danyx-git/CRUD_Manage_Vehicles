@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
 
-/* MAIN CSS */
-html, body {
+:root {
+  --color-primary: #282828;
+  --color-secondary: #797979;
+  --color-border: #dfdfdf;
+  --color-background: #fdfdfd;
+  --color-link: #000;
+  --font-main: "Vend Sans", sans-serif;
+  --font-fallback: sans-serif;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,114 +20,257 @@ html, body {
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  height: 100vh;
-  background-color: #f5f6fa;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+/* ------------------- MAIN ------------------- */
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  transition: color 0.3s ease;
 }
 
-/* MAIN CONTAINER */
+header {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 50px;
+  background-color: white;
+}
+
+header div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+header div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header div:last-child a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 20px 0 20px;
+  border: 1px solid transparent;
+  transition: 0.3s all ease;
+  border-radius: 10px;
+}
+
+header div:last-child a:hover{
+  transform: translateX(1px);
+  border: 1px solid var(--color-border);
+  
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 40px 100px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.5);
-  background-color: #fff;
+  flex: 1;
+}
+
+.main-container h1,
+.main-container h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container h3 {
+  font-weight: 400;
+  color: var(--color-secondary);
 }
 
 .main-container a {
-  font-family: "Roboto", sans-serif;
-  width: 250px;
-  padding: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
-  border: none;
-  background-color: #2f3176;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  padding: 20px;
+  width: 100%;
+  max-width: 35vw;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background-color: white;
 }
 
 .main-container a:hover {
-  transform: scale(1.05);
-  font-size: 15px;
-  background-color: #3b3e9c;
+  transform: scale(1.02);
   cursor: pointer;
+  box-shadow: 2px 2px 8px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* INSERT FORM */
+.main-container a div p:first-child {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-link);
+}
+
+.main-container a div p:last-child {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 0.9em;
+}
+
+/* ------------------- FORMULARIO ------------------- */
+
 .insert-form {
   display: flex;
   flex-direction: column;
-  padding: 25px 30px;
+  gap: 15px;
+  margin: 5vh auto;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.4);
-  width: 420px;
-  background-color: #fff;
+  border: 1px solid var(--color-border);
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
 }
 
-.insert-form label {
-  margin: 10px 0 4px 0;
-  font-size: 14px;
-  font-weight: 500;
+.insert-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#plate-combustion-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#plate-combustion-container div {
+  display: flex;
+  flex-direction: column;
 }
 
 .insert-form input,
 .insert-form select {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  background-color: #f3f3f3;
+  font-family: var(--font-main);
+  font-size: 1rem;
 }
 
 .insert-form input[type="text"],
-.insert-form input[type="file"],
 .insert-form select {
   margin-bottom: 12px;
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
-  transition: border 0.3s;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .insert-form input[type="text"]:focus,
 .insert-form select:focus {
-  border: 1px solid #007bff;
-}
-
-.insert-form input[type="radio"],
-.insert-form input[type="checkbox"] {
-  margin-right: 6px;
-}
-
-.insert-form label input[type="radio"],
-.insert-form label input[type="checkbox"] {
-  font-weight: normal;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(40, 40, 40, 0.1);
 }
 
 .insert-form div label {
   font-weight: normal;
   display: inline-flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+.insert-form label input[type="radio"],
+.insert-form label input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  margin-right: 5px;
+}
+
+.insert-form label input[type="radio"] {
+  margin-left: 20px;
+}
+
+.insert-form input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-secondary);
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.file-label span {
+  display: block;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.file-label:hover {
+  border-color: var(--color-primary);
+  background-color: #f0f0f0;
+  
+}
+
+.file-label .file-name {
+  display: block;
+  font-size: 0.9em;
+  color: var(--color-primary);
+  margin-top: 5px;
+  word-break: break-all;
+  max-width: 90%; 
+  text-align: center;
+}
+
+.file-label .material-symbols-outlined {
+  font-size: 50px;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
 }
 
 .insert-form input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: var(--color-background);
+  color: var(--color-link);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.4s ease;
   font-weight: 500;
+  font-size: 1em;
+  transition: 0.4s all ease;
 }
 
 .insert-form input[type="submit"]:hover {
-  transform: scale(1.02);
-  background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.329);
+  background-color: var(--color-link);
+  color: var(--color-background);
+}
+
+/* ------------------- FOOTER ------------------- */
+
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  color: var(--color-primary);
+  font-size: 0.9em;
 }

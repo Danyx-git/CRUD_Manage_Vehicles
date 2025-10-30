@@ -3,16 +3,51 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="css/styles.css">
     <title>Gestión de vehiculos</title>
   </head>
   <body>
+    <header>
+      <div>
+        <span class="material-symbols-outlined">car_gear</span>
+        <h2>Gestion de Vehículos</h2>
+      </div>
+    </header>
     <div class="main-container">
-      <h1>Gestión de vehículos</h1>
-      <a href="./html/insert.html">INSERTAR VEHÍCULO</a>
-      <a href="./php/show.php">MOSTRAR VEHÍCULO</a>
-      <a href="modify.php">MODIFICAR VEHÍCULO</a>
-      <a href="delete.php">ELIMINAR VEHÍCULO</a>
+      <h1>Taller Mecánico</h1>
+      <h3>Seleccione una operación</h3>
+      <a href="./html/insert.html">
+        <span class="material-symbols-outlined">add</span>
+        <div>
+          <p>Insertar vehículo</p>
+          <p>Añadir un nuevo registro</p>
+        </div>
+      </a>
+      <a href="./php/show.php">
+        <span class="material-symbols-outlined">list</span>
+        <div>
+          <p>Mostrar vehículo</p>
+          <p>Ver todos los registros</p>
+        </div>
+      </a>
+      <a href="modify.php">
+        <span class="material-symbols-outlined">edit</span>
+        <div>
+          <p>Modificar vehículo</p>
+          <p>Editar información existente</p>
+        </div>
+      </a>
+      <a href="delete.php">
+        <span class="material-symbols-outlined">delete</span>
+        <div>
+          <p>Eliminar vehículo</p>
+          <p>Borrar un registro</p>
+        </div>
+      </a>
     </div>
+    <footer>
+    <p>2ºDAW Servidor - Gestión CRUD de Vehículos - &copy2025</p>
+  </footer>
   </body>
 </html>

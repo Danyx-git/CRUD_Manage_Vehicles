@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <link rel="stylesheet" href="../css/styles.css">
-  <title>Formulario del vehículo</title>
+  <title>Formulario del Vehículo</title>
 </head>
+
 <body>
   <header>
     <div>
       <span class="material-symbols-outlined">car_gear</span>
-      <h2>Gestion de Vehículos</h2>
+      <h2>Gestión de Vehículos</h2>
     </div>
     <div>
       <a href="../index.html">
@@ -20,6 +21,7 @@
       </a>
     </div>
   </header>
+
   <form class="insert-form" action="../php/insert.php" method="POST" enctype="multipart/form-data">
     <!-- Nombre -->
     <div>
@@ -61,11 +63,12 @@
         <label for="vehicle_plate">Matrícula:</label>
         <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="1234 ABC" required>
       </div>
+
       <!-- Tipo de combustible -->
       <div>
         <label for="vehicle_combustion">Combustión:</label>
         <select id="vehicle_combustion" name="vehicle_combustion" required>
-          <option value="" selected hidden>--Seleciona una combustión--</option>
+          <option value="" selected hidden>--Selecciona una combustión--</option>
           <option value="Gasolina">Gasolina</option>
           <option value="Diesel">Diésel</option>
           <option value="Híbrido">Híbrido</option>
@@ -75,7 +78,7 @@
     </div>
 
     <!-- En garantía -->
-    <div>
+    <div id="warranty-container">
       <label>¿En garantía?</label>
       <label><input type="radio" name="vehicle_warranty" value="Sí" required> Sí</label>
       <label><input type="radio" name="vehicle_warranty" value="No"> No</label>
@@ -84,21 +87,44 @@
     <!-- Servicios adicionales -->
     <div>
       <label>Servicios adicionales:</label>
-      <label><input type="checkbox" name="vehicle_addition1">Lavado completo</label>
-      <label><input type="checkbox" name="vehicle_addition2">Cambio de aceite</label>
-      <label><input type="checkbox" name="vehicle_addition3">Revisión de frenos</label>
-      <label><input type="checkbox" name="vehicle_addition4">Alineación</label>
+      <label><input type="checkbox" name="vehicle_addition1"> Lavado completo</label>
+      <label><input type="checkbox" name="vehicle_addition2"> Cambio de aceite</label>
+      <label><input type="checkbox" name="vehicle_addition3"> Revisión de frenos</label>
+      <label><input type="checkbox" name="vehicle_addition4"> Alineación</label>
     </div>
+
     <!-- Imagen -->
     <div>
-      <label for="vehicle_image">Imagen:</label>
+      <label for="vehicle_image" class="file-label">
+        <span class="material-symbols-outlined">upload</span>
+        <span class="file-label-text">Haz clic o arrastra una imagen aquí</span>
+        <span class="file-name"></span> <!-- span para el nombre del archivo -->
+      </label>
       <input type="file" id="vehicle_image" name="vehicle_image" accept="image/*">
     </div>
+
     <!-- Enviar formulario -->
     <input type="submit" value="Registrar vehículo">
   </form>
+
   <footer>
-    <p>2ºDAW Servidor - Gestión CRUD de Vehículos - &copy2025</p>
+    <p>2ºDAW Servidor - Gestión CRUD de Vehículos - &copy;2025</p>
   </footer>
+
+  <!-- Script para previsualizar el nombre de la imagen -->
+  <script>
+    const fileInput = document.getElementById("vehicle_image");
+    const fileName = document.querySelector(".file-label .file-name");
+
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        fileName.textContent = file.name;
+      } else {
+        fileName.textContent = "";
+      }
+    });
+  </script>
+
 </body>
 </html>
