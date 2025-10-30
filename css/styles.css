@@ -35,7 +35,7 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: auto auto;
   border-bottom: 1px solid var(--color-border);
   padding: 10px 50px;
   background-color: white;
@@ -157,7 +157,7 @@ header div:last-child a:hover{
 .insert-form select {
   background-color: #f3f3f3;
   font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .insert-form input[type="text"],
