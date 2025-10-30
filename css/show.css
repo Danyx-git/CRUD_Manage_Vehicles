@@ -1,0 +1,30 @@
+main{ 
+}
+h1{
+    text-align: center;
+}
+.vehicleContainer{
+    border-radius: 15px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.5);
+}
+p{
+    font-size: large;
+}
+.plate{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+
+}
+.plate p{
+    margin-top: 0;
+    font-size: 34px;
+    display: inline-block;
+    background-color:gainsboro;
+    border-radius: 5px;
+}
+.plate img{
+    height: 40px;
+}
