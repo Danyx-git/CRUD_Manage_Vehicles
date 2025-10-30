@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS db_vehicles;
+DROP DATABASE db_vehicles;
+CREATE DATABASE db_vehicles;
 USE db_vehicles;
 CREATE TABLE IF NOT EXISTS vehiculo(
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -8,6 +9,8 @@ CREATE TABLE IF NOT EXISTS vehiculo(
     combustion VARCHAR(50) NOT NULL,
     warranty BOOLEAN NOT NULL,
     cleanCar BOOLEAN NOT NULL,
-    tracking BOOLEAN NOT NULL,
+    oilChange BOOLEAN NOT NULL,
+    brakeCheck BOOLEAN NOT NULL,
+    Alignment BOOLEAN NOT NULL,
     image VARCHAR(500)
 );
