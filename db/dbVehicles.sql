@@ -1,4 +1,4 @@
-DROP DATABASE db_vehicles;
+DROP DATABASE IF EXISTS db_vehicles;
 CREATE DATABASE db_vehicles;
 USE db_vehicles;
 CREATE TABLE IF NOT EXISTS vehiculo(
