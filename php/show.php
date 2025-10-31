@@ -20,17 +20,52 @@
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 ?>
                 <div class="vehicleContainer">
-                    <img src="<?=$row['image']?>">
-                    <h1><?=$row['clientName']?></h1>
-                    <p><?=$row['brand']?></p>
-                    <p><?=$row['combustion']?></p>
-                    <div class="plate">
-                        <img alt="Imagen del vehiculo" src="../images/Eplate.png">
-                        <p><?=$row['plate']?></p>
+                    <img class="vehicleImage" src="<?=$row['image']?>">
+                    <div>
+                        <div class="lineInfoOne">
+                            <h2><?=$row['brand']. " - ".$row['plate']?></h2>
+                            <p class="warranty"><?=$row['warranty'] == 1?"Con garantia" : "Sin garantia"?></p>
+                            <p class="combustion"><?=$row['combustion']?></p>
+                        </div>
+                        <div class="mainInfo">
+                        <div class="lineInfoStandart">
+                            <p class="lightGray">Cliente</p>
+                            <p><?=$row['clientName']?></p>
+                        </div>
+                        <div class="lineInfoStandart">
+                            <p class="lightGray">Marca</p>
+                            <p><?=$row['brand']?></p>
+                        </div>
+                        <div class="lineInfoStandart">
+                            <p class="lightGray">Matrícula</p>
+                            <p><?=$row['plate']?></p>
+                        </div>
+                        <div class="lineInfoStandart">
+                            <p class="lightGray">Tipo</p>
+                            <p><?=$row['combustion']?></p>
+                        </div>
+                        
+                        <?php
+                            /*
+                            MATRICULA IMITANDO MATRICULA ESPAÑOLA
+                            <div class="plate">
+                                <img alt="Imagen del vehiculo" src="../images/Eplate.png">
+                                <p><?=$row['plate']?></p>
+                            </div>
+                            */
+                        ?>
+
+                        </div>
+                        <hr>
+                        <h4 class="h4Additions">Servicios adicionales</h4>
+                        <div class="additions">
+                            <?=$row['cleanCar'] == 1?"<p>Limpieza de vehículo</p>" : ""?>
+                            <?=$row['oilChange'] == 1?"<p>Cambio de aceite</p>" : ""?>
+                            <?=$row['brakeCheck'] == 1?"<p>Revisión de frenos</p>" : ""?>
+                            <?=$row['Alignment'] == 1?"<p>Alineamiento</p>" : ""?>
+
+                        </div>
                     </div>
-                    <p><?=$row['warranty']?></p>
-                    <p><?=$row['cleanCar']?></p>
-                    <p><?=$row['tracking']?></p>
                 </div>
                 <?php
             }
