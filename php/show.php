@@ -27,7 +27,7 @@
         require_once "connection.php";
         try{
             $conn = Connection();
-            $sql = "SELECT * FROM vehicles";
+            $sql = "SELECT * FROM vehicles ORDER BY id DESC";
             $stmt = $conn->query($sql);
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 ?>

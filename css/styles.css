@@ -562,16 +562,31 @@ body.result-page main {
 }
 
 /* ------------------- DELETE.PHP ------------------- */
-.deleteTable{
-  border: 1px solid black;
-  border-radius: 10px;
-  border-spacing: 0;
+/* BOTÓN MODIFICAR */
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color:red;
 }
-.deleteTable td, .deleteTable th{
-  text-align: center;
-  border-bottom: 1px solid black;
+
+.delete-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
 }
-.deleteTable tr:last-child td {
-  border-bottom: none;
+
+.delete-btn .material-symbols-outlined {
+  font-size: 18px;
+  vertical-align: middle;
 }
 
