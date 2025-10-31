@@ -62,7 +62,7 @@ header div:last-child a {
   gap: 0.5em;
   padding: 0 20px 0 20px;
   border: 1px solid transparent;
-  transition: 0.3s all ease;
+  transition: 0.3s all ease;  
   border-radius: 10px;
 }
 
@@ -75,6 +75,7 @@ header div:last-child a:hover{
 main {
     flex: 1; 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 20px;
 }
