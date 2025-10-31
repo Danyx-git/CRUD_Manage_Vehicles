@@ -1,6 +1,6 @@
 USE db_vehicles;
 
-INSERT INTO vehiculo (clientName, brand, plate, combustion, warranty, cleanCar, oilChange, brakeCheck, Alignment, image)
+INSERT INTO vehicles (clientName, brand, plate, combustion, warranty, cleanCar, oilChange, brakeCheck, alignment, image)
 VALUES
 ('Carlos Pérez', 'Toyota Corolla', '1234ABC', 'Gasolina', TRUE, TRUE, TRUE, TRUE, TRUE, '../images/imagenEjemplo.jpg'),
 ('María López', 'Tesla Model 3', '5678XYZ', 'Eléctrico', TRUE, FALSE, FALSE, TRUE, TRUE, '../images/imagenEjemplo.jpg'),
