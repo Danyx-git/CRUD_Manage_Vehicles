@@ -42,7 +42,6 @@
   border-bottom: none;
 }
 
-/* COLUMNA GARANTÍA */
 .garantia-tag {
   display: inline-block;
   background-color: var(--color-success-bg);
@@ -53,7 +52,6 @@
   font-size: 0.9rem;
 }
 
-/* BOTÓN MODIFICAR */
 .modify-btn {
   display: inline-flex;
   align-items: center;
