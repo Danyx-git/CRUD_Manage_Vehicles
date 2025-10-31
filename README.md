@@ -1,45 +1,45 @@
-# 🚗 Vehicle CRUD Management
+# 🚗 Gestión CRUD de Vehículos
 
-Web application for **vehicle management in a mechanical workshop**, developed as a practical project for the **Server-Side Web Development (2º DAW)** module.  
-It allows performing **CRUD operations** (Create, Read, Update, Delete) on a vehicle database, using **PHP**, **MySQL**, and **JavaScript** to enhance user experience.
-
----
-
-## 🧭 Table of Contents
-
-- [Features](#-features)
-- [Technologies Used](#-technologies-used)
-- [Screenshots](#-screenshots)
-- [Authors](#-authors)
-- [License](#-license)
+Aplicación web para la **gestión de vehículos en un taller mecánico**, desarrollada como proyecto práctico para el módulo de **Desarrollo Web en Entorno Servidor (2º DAW)**.  
+Permite realizar **operaciones CRUD** (Crear, Leer, Actualizar, Eliminar) sobre una base de datos de vehículos, utilizando **PHP**, **MySQL** y **JavaScript** para mejorar la experiencia del usuario.
 
 ---
 
-## 🚀 Features
+## 🧭 Tabla de Contenidos
 
-- **Main menu** with access to the 4 CRUD actions:  
-  - ➕ Insert Vehicle  
-  - 📋 Show Vehicles  
-  - ✏️ Edit Vehicle  
-  - 🗑️ Delete Vehicle  
-
-- **Full vehicle data management:**
-  - Client name  
-  - Brand (select)  
-  - License plate  
-  - Type  
-  - Under warranty (radio button)  
-  - Additional services (multiple checkbox)  
-  - Vehicle image (uploaded to the server)
-
-- **JavaScript confirmations** before saving or deleting records.  
-- **Use of PDO and prepared statements** for secure database queries.  
-- **Physical upload and deletion of images** associated with each record.  
-- **Clean and simple interface** styled with **CSS** and **SVG icons or emojis**.
+- [Características](#-características)
+- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+- [Capturas de Pantalla](#-capturas-de-pantalla)
+- [Autores](#-autores)
+- [Licencia](#-licencia)
 
 ---
 
-## 🧰 Technologies Used
+## 🚀 Características
+
+- **Menú principal** con acceso a las 4 acciones CRUD:  
+  - ➕ Insertar Vehículo  
+  - 📋 Mostrar Vehículos  
+  - ✏️ Editar Vehículo  
+  - 🗑️ Eliminar Vehículo  
+
+- **Gestión completa de los datos del vehículo:**
+  - Nombre del cliente  
+  - Marca (selección)  
+  - Matrícula  
+  - Tipo  
+  - En garantía (botón de opción)  
+  - Servicios adicionales (casillas de verificación múltiples)  
+  - Imagen del vehículo (subida al servidor)
+
+- **Confirmaciones con JavaScript** antes de guardar o eliminar registros.  
+- **Uso de PDO y sentencias preparadas** para consultas seguras a la base de datos.  
+- **Subida y eliminación física de imágenes** asociadas a cada registro.  
+- **Interfaz limpia y sencilla**, diseñada con **CSS** e **iconos SVG o emojis**.
+
+---
+
+## 🧰 Tecnologías Utilizadas
 
 - **Frontend:**  
   - HTML5  
@@ -47,42 +47,42 @@ It allows performing **CRUD operations** (Create, Read, Update, Delete) on a veh
   - JavaScript  
 
 - **Backend:**  
-  - PHP (with PDO for secure database connection)
+  - PHP (con PDO para conexión segura a la base de datos)
 
-- **Database:**  
+- **Base de Datos:**  
   - MySQL
 
 ---
 
-## 🖼️ Screenshots
+## 🖼️ Capturas de Pantalla
 
-Below are some screenshots of the application in action:
+A continuación se muestran algunas capturas de la aplicación en funcionamiento:
 
-### 🏠 Main Menu  
-![Main Menu](./screenshots/main-menu.png)
+### 🏠 Menú Principal  
+![Menú Principal](./screenshots/main-menu.png)
 
-### ➕ Insert Vehicle  
-![Insert Vehicle](./screenshots/insert-vehicles.png)
+### ➕ Insertar Vehículo  
+![Insertar Vehículo](./screenshots/insert-vehicles.png)
 
-### 📋 Vehicle List  
-![Vehicle List](./screenshots/show-vehicles.png)
+### 📋 Lista de Vehículos  
+![Lista de Vehículos](./screenshots/show-vehicles.png)
 
-### ✏️ Edit Vehicle  
-![Edit Vehicle](./screenshots/modify-vehicles.png)
+### ✏️ Editar Vehículo  
+![Editar Vehículo](./screenshots/modify-vehicles.png)
 
-### 🗑️ Delete Vehicle  
-![Delete Vehicle](./screenshots/delete-vehicles.png)
+### 🗑️ Eliminar Vehículo  
+![Eliminar Vehículo](./screenshots/delete-vehicles.png)
 
 ---
 
-## 👥 Authors
+## 👥 Autores
 
 - **Daniel Medina Rodas**  
 - **Héctor Castro Cascales**
 
 ---
 
-## 📜 License
+## 📜 Licencia
 
-This project is distributed under the **MIT License**.  
-You are free to use, modify, and distribute the code for educational or personal purposes.
+Este proyecto se distribuye bajo la **Licencia MIT**.  
+Eres libre de usar, modificar y distribuir el código con fines educativos o personales.
