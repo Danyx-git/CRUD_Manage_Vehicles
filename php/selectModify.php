@@ -57,7 +57,7 @@
             
             // Imagen
             if (!empty($vehicle['image']) && file_exists($vehicle['image'])) {
-                echo '<td><img src="' . htmlspecialchars($vehicle['image']) . '" alt="Vehículo" class="thumb"></td>';
+                echo '<td><img width=150; src="' . htmlspecialchars($vehicle['image']) . '" alt="Vehículo" class="thumb"></td>';
             } else {
                 echo '<td><span class="no-image">Sin imagen</span></td>';
             }

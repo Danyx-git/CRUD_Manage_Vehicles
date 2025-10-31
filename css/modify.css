@@ -80,20 +80,3 @@
   vertical-align: middle;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .modify-container {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .modify-table th,
-  .modify-table td {
-    font-size: 0.85rem;
-    padding: 10px 6px;
-  }
-
-  .modify-btn {
-    font-size: 0.85rem;
-  }
-}
