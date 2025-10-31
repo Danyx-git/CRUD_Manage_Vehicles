@@ -1,48 +1,45 @@
-# 🚗 Gestión CRUD de Vehículos
+# 🚗 Vehicle CRUD Management
 
-Aplicación web para la **gestión de vehículos en un taller mecánico**, desarrollada como práctica del módulo **Desarrollo Web en Entorno Servidor (2º DAW)**.  
-Permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) sobre una base de datos de vehículos, utilizando **PHP**, **MySQL** y **JavaScript** para mejorar la experiencia del usuario.
-
----
-
-## 🧭 Contenido
-
-- [Características](#-características)
-- [Tecnologías utilizadas](#-tecnologías-utilizadas)
-- [Estructura del proyecto](#-estructura-del-proyecto)
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Capturas de pantalla (opcional)](#-capturas-de-pantalla-opcional)
-- [Autores](#-autores)
-- [Licencia](#-licencia)
+Web application for **vehicle management in a mechanical workshop**, developed as a practical project for the **Server-Side Web Development (2º DAW)** module.  
+It allows performing **CRUD operations** (Create, Read, Update, Delete) on a vehicle database, using **PHP**, **MySQL**, and **JavaScript** to enhance user experience.
 
 ---
 
-## 🚀 Características
+## 🧭 Table of Contents
 
-- **Menú principal** con acceso a las 4 acciones CRUD:  
-  - ➕ Insertar vehículo  
-  - 📋 Mostrar vehículos  
-  - ✏️ Modificar vehículo  
-  - 🗑️ Eliminar vehículo  
-
-- **Gestión completa de datos del vehículo:**
-  - Nombre del cliente  
-  - Marca (select)  
-  - Matrícula  
-  - Tipo  
-  - En garantía (radio button)  
-  - Servicios adicionales (checkbox múltiple)  
-  - Imagen del vehículo (subida al servidor)
-
-- **Confirmaciones con JavaScript** antes de guardar o eliminar datos.  
-- **Uso de PDO y prepared statements** para consultas seguras a la base de datos.  
-- **Subida y eliminación física de imágenes** asociadas a cada registro.  
-- **Interfaz sencilla y limpia**, con **CSS** y **iconos SVG o emojis** para las acciones.
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [Screenshots](#-screenshots)
+- [Authors](#-authors)
+- [License](#-license)
 
 ---
 
-## 🧰 Tecnologías utilizadas
+## 🚀 Features
+
+- **Main menu** with access to the 4 CRUD actions:  
+  - ➕ Insert Vehicle  
+  - 📋 Show Vehicles  
+  - ✏️ Edit Vehicle  
+  - 🗑️ Delete Vehicle  
+
+- **Full vehicle data management:**
+  - Client name  
+  - Brand (select)  
+  - License plate  
+  - Type  
+  - Under warranty (radio button)  
+  - Additional services (multiple checkbox)  
+  - Vehicle image (uploaded to the server)
+
+- **JavaScript confirmations** before saving or deleting records.  
+- **Use of PDO and prepared statements** for secure database queries.  
+- **Physical upload and deletion of images** associated with each record.  
+- **Clean and simple interface** styled with **CSS** and **SVG icons or emojis**.
+
+---
+
+## 🧰 Technologies Used
 
 - **Frontend:**  
   - HTML5  
@@ -50,19 +47,42 @@ Permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) sobre
   - JavaScript  
 
 - **Backend:**  
-  - PHP (PDO para conexión segura con la base de datos)
+  - PHP (with PDO for secure database connection)
 
-- **Base de datos:**  
+- **Database:**  
   - MySQL
 
 ---
 
-## 📁 Estructura del proyecto
+## 🖼️ Screenshots
 
-/CRUD-Vehiculos
-│
-├── index.html # Página principal / menú
-├── php/ # Carpeta con los scripts PHP
-├── css/
-│ └── styles.css # Estilos del proyecto
-└── README.md # Documentación del proyecto
+Below are some screenshots of the application in action:
+
+### 🏠 Main Menu  
+![Main Menu](./screenshot/menu-principal.png)
+
+### ➕ Insert Vehicle  
+![Insert Vehicle](./screenshot/insert-vehicles.png)
+
+### 📋 Vehicle List  
+![Vehicle List](./screenshot/show-vehicles.png)
+
+### ✏️ Edit Vehicle  
+![Edit Vehicle](./screenshot/modify-vehicles.png)
+
+### 🗑️ Delete Vehicle  
+![Delete Vehicle](./screenshot/delete-vehicles.png)
+
+---
+
+## 👥 Authors
+
+- **Daniel Medina Rodas**  
+- **Héctor Castro Cascales**
+
+---
+
+## 📜 License
+
+This project is distributed under the **MIT License**.  
+You are free to use, modify, and distribute the code for educational or personal purposes.
