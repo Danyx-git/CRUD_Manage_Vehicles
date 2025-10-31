@@ -476,7 +476,7 @@ body.result-page main {
     border-radius: 15px;
     margin: auto;
     width: 50%;
-    margin-bottom: 20px;
+    margin-top: 20px;
     box-shadow: 5px 5px 25px rgba(124, 124, 124, 0.5);
 }
 .plate{
@@ -557,6 +557,21 @@ body.result-page main {
 }
 .h3Listado{
   margin-top: 10px;
+  margin-bottom: 0;
   text-align: center;
+}
+
+/* ------------------- DELETE.PHP ------------------- */
+.deleteTable{
+  border: 1px solid black;
+  border-radius: 10px;
+  border-spacing: 0;
+}
+.deleteTable td, .deleteTable th{
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.deleteTable tr:last-child td {
+  border-bottom: none;
 }
 
