@@ -59,19 +59,19 @@ It allows performing **CRUD operations** (Create, Read, Update, Delete) on a veh
 Below are some screenshots of the application in action:
 
 ### 🏠 Main Menu  
-![Main Menu](./screenshot/menu-principal.png)
+![Main Menu](./screenshots/main-menu.png)
 
 ### ➕ Insert Vehicle  
-![Insert Vehicle](./screenshot/insert-vehicles.png)
+![Insert Vehicle](./screenshots/insert-vehicles.png)
 
 ### 📋 Vehicle List  
-![Vehicle List](./screenshot/show-vehicles.png)
+![Vehicle List](./screenshots/show-vehicles.png)
 
 ### ✏️ Edit Vehicle  
-![Edit Vehicle](./screenshot/modify-vehicles.png)
+![Edit Vehicle](./screenshots/modify-vehicles.png)
 
 ### 🗑️ Delete Vehicle  
-![Delete Vehicle](./screenshot/delete-vehicles.png)
+![Delete Vehicle](./screenshots/delete-vehicles.png)
 
 ---
 
