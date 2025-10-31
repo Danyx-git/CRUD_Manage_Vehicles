@@ -73,11 +73,90 @@
       $stmt = $conn->prepare($sql);
       $stmt->execute($params);
 
-      echo "<p class='success'>Vehículo actualizado correctamente. 
-              <a href='selectModify.php'>Volver al listado</a>
-            </p>";
-  }
+      echo '
+            <div class="success-container">
+              <div class="success-card">
+                <span class="material-symbols-outlined success-icon">check_circle</span>
+                <h1>¡Vehículo actualizado correctamente!</h1>
+                <p>Los cambios se han guardado con éxito en la base de datos.</p>
+                <a href="selectModify.php" class="btn-return">
+                  <span class="material-symbols-outlined">arrow_back</span>
+                  Volver al listado
+                </a>
+              </div>
+            </div>
 
+            <style>
+              .success-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 70vh;
+                animation: fadeIn 0.5s ease-in-out;
+              }
+
+              .success-card {
+                background: #ffffff;
+                border-radius: 20px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                padding: 2.5rem 3rem;
+                text-align: center;
+                max-width: 450px;
+                animation: slideUp 0.6s ease-in-out;
+              }
+
+              .success-icon {
+                color: #4caf50;
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                animation: pop 0.4s ease-in-out;
+              }
+
+              .success-card h1 {
+                color: #333;
+                margin-bottom: 0.5rem;
+              }
+
+              .success-card p {
+                color: #555;
+                font-size: 1.1rem;
+                margin-bottom: 1.8rem;
+              }
+
+              .btn-return {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                text-decoration: none;
+                background: #4caf50;
+                color: white;
+                padding: 0.7rem 1.3rem;
+                border-radius: 10px;
+                font-weight: bold;
+                transition: background 0.3s ease;
+              }
+
+              .btn-return:hover {
+                background: #43a047;
+              }
+
+              @keyframes fadeIn {
+                from { opacity: 0; } to { opacity: 1; }
+              }
+
+              @keyframes slideUp {
+                from { transform: translateY(30px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+              }
+
+              @keyframes pop {
+                0% { transform: scale(0.8); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+              }
+            </style>
+            ';
+
+      }
   // Mostrar formulario si hay ID válido
   if (isset($_GET['id'])) {
       $id = $_GET['id'];
