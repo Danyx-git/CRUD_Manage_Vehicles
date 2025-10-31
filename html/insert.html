@@ -1,120 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Formulario del Vehículo</title>
-  </head>
-  <body>
-    <header>
-      <div>
-        <span class="material-symbols-outlined">car_gear</span>
-        <h2>Gestión de Vehículos</h2>
-      </div>
-      <div>
-        <a href="../index.html">
-          <span class="material-symbols-outlined">arrow_back</span>
-          <h3>Volver</h3>
-        </a>
-      </div>
-    </header>  
-    <main>
-      <form class="insert-form" action="../php/insert.php" method="POST" enctype="multipart/form-data">
-        <!-- Nombre -->
-        <div>
-          <label for="vehicle_name">Nombre:</label>
-          <input type="text" id="vehicle_name" name="vehicle_name" maxlength="150" placeholder="Juan Pérez" required>
-        </div>
-        <!-- Marca -->
-        <div>
-          <label for="vehicle_brand">Marca:</label>
-          <select id="vehicle_brand" name="vehicle_brand" required>
-            <option value="" hidden selected>--Seleccione una marca--</option>
-            <option value="Toyota">Toyota</option>
-            <option value="Ford">Ford</option>
-            <option value="Chevrolet">Chevrolet</option>
-            <option value="Honda">Honda</option>
-            <option value="Nissan">Nissan</option>
-            <option value="Volkswagen">Volkswagen</option>
-            <option value="Hyundai">Hyundai</option>
-            <option value="Kia">Kia</option>
-            <option value="Mazda">Mazda</option>
-            <option value="Subaru">Subaru</option>
-            <option value="Jeep">Jeep</option>
-            <option value="Tesla">Tesla</option>
-            <option value="BMW">BMW</option>
-            <option value="Mercedes-Benz">Mercedes-Benz</option>
-            <option value="Audi">Audi</option>
-            <option value="Porsche">Porsche</option>
-            <option value="Volvo">Volvo</option>
-            <option value="Lexus">Lexus</option>
-            <option value="Ferrari">Ferrari</option>
-            <option value="Lamborghini">Lamborghini</option>
-          </select>
-        </div>
-        <div id="plate-combustion-container">
-          <!-- Matrícula -->
-          <div>
-            <label for="vehicle_plate">Matrícula:</label>
-            <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="1234 ABC" required>
-          </div>
-          <!-- Tipo de combustible -->
-          <div>
-            <label for="vehicle_combustion">Combustión:</label>
-            <select id="vehicle_combustion" name="vehicle_combustion" required>
-              <option value="" selected hidden>--Selecciona una combustión--</option>
-              <option value="Gasolina">Gasolina</option>
-              <option value="Diesel">Diésel</option>
-              <option value="Híbrido">Híbrido</option>
-              <option value="Eléctrico">Eléctrico</option>
-            </select>
-          </div>
-        </div>
-        <!-- En garantía -->
-        <div id="warranty-container">
-          <label>¿En garantía?</label>
-          <label><input type="radio" name="vehicle_warranty" value="Sí" required> Sí</label>
-          <label><input type="radio" name="vehicle_warranty" value="No"> No</label>
-        </div>
-        <!-- Servicios adicionales -->
-        <div>
-          <label>Servicios adicionales:</label>
-          <label><input type="checkbox" name="vehicle_addition1"> Lavado completo</label>
-          <label><input type="checkbox" name="vehicle_addition2"> Cambio de aceite</label>
-          <label><input type="checkbox" name="vehicle_addition3"> Revisión de frenos</label>
-          <label><input type="checkbox" name="vehicle_addition4"> Alineación</label>
-        </div>
-        <!-- Imagen -->
-        <div>
-          <label for="vehicle_image" class="file-label">
-            <span class="material-symbols-outlined">upload</span>
-            <span class="file-label-text">Haz clic o arrastra una imagen aquí</span>
-            <span class="file-name"></span> <!-- span para el nombre del archivo -->
-          </label>
-          <input type="file" id="vehicle_image" name="vehicle_image" accept="image/*">
-        </div>
-        <!-- Enviar formulario -->
-        <input type="submit" value="Registrar vehículo">
-      </form>
-    </main>
-    <footer>
-      <p>2ºDAW Servidor - Gestión CRUD de Vehículos - &copy;2025</p>
-    </footer>
-    <!-- Script para previsualizar el nombre de la imagen -->
-    <script>
-      const fileInput = document.getElementById("vehicle_image");
-      const fileName = document.querySelector(".file-label .file-name");
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Formulario del Vehículo</title>
+</head>
+<body>
+<header>
+  <div>
+    <span class="material-symbols-outlined">car_gear</span>
+    <h2>Gestión de Vehículos</h2>
+  </div>
+  <div>
+    <a href="../index.html">
+      <span class="material-symbols-outlined">arrow_back</span>
+      <h3>Volver</h3>
+    </a>
+  </div>
+</header>
 
-      fileInput.addEventListener("change", (e) => {
-        const file = e.target.files[0];
-        if (file) {
-          fileName.textContent = file.name;
-        } else {
-          fileName.textContent = "";
-        }
-      });
-    </script>
-  </body>
+<main>
+  <form class="insert-form" action="../php/insert.php" method="POST" enctype="multipart/form-data">
+    <div>
+      <label for="vehicle_name">Nombre:</label>
+      <input type="text" id="vehicle_name" name="vehicle_name" maxlength="150" placeholder="Juan Pérez" required>
+    </div>
+
+    <div>
+      <label for="vehicle_brand">Marca:</label>
+      <select id="vehicle_brand" name="vehicle_brand" required>
+        <option value="" hidden selected>--Seleccione una marca--</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Ford">Ford</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Honda">Honda</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Kia">Kia</option>
+        <option value="Mazda">Mazda</option>
+        <option value="Subaru">Subaru</option>
+        <option value="Jeep">Jeep</option>
+        <option value="Tesla">Tesla</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes-Benz">Mercedes-Benz</option>
+        <option value="Audi">Audi</option>
+        <option value="Porsche">Porsche</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Lexus">Lexus</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Lamborghini">Lamborghini</option>
+      </select>
+    </div>
+
+    <div id="plate-combustion-container">
+      <div>
+        <label for="vehicle_plate">Matrícula:</label>
+        <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="1234 ABC" required>
+      </div>
+
+      <div>
+        <label for="vehicle_combustion">Combustión:</label>
+        <select id="vehicle_combustion" name="vehicle_combustion" required>
+          <option value="" selected hidden>--Selecciona una combustión--</option>
+          <option value="Gasolina">Gasolina</option>
+          <option value="Diesel">Diésel</option>
+          <option value="Híbrido">Híbrido</option>
+          <option value="Eléctrico">Eléctrico</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="warranty-container">
+      <label>¿En garantía?</label>
+      <label><input type="radio" name="vehicle_warranty" value="Sí" required> Sí</label>
+      <label><input type="radio" name="vehicle_warranty" value="No"> No</label>
+    </div>
+
+    <div>
+      <label>Servicios adicionales:</label>
+      <!-- IMPORTANT: value="1" es importante -->
+      <label><input type="checkbox" name="vehicle_cleanCar" value="1"> Lavado</label>
+      <label><input type="checkbox" name="vehicle_oilChange" value="1"> Cambio de aceite</label>
+      <label><input type="checkbox" name="vehicle_brakeCheck" value="1"> Revisión de frenos</label>
+      <label><input type="checkbox" name="vehicle_alignment" value="1"> Alineación</label>
+    </div>
+
+    <div>
+      <label for="vehicle_image" class="file-label">
+        <span class="material-symbols-outlined">upload</span>
+        <span class="file-label-text">Haz clic o arrastra una imagen aquí</span>
+        <span class="file-name"></span>
+      </label>
+      <input type="file" id="vehicle_image" name="vehicle_image" accept="image/*">
+    </div>
+
+    <input type="submit" value="Registrar vehículo">
+  </form>
+</main>
+
+<footer>
+  <p>2ºDAW Servidor - Gestión CRUD de Vehículos - &copy;2025</p>
+</footer>
+
+<script>
+  const fileInput = document.getElementById("vehicle_image");
+  const fileName = document.querySelector(".file-label .file-name");
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    fileName.textContent = file ? file.name : "";
+  });
+</script>
+</body>
 </html>

@@ -455,6 +455,20 @@ body.result-page main {
     max-width: 250px;
     text-align: center;
 }
+
+.vehicle-image-preview {
+    max-width: 250px;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+.data-row.image-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* ------------------- LISTADO VEHÍCULOS ------------------- */
 .vehicleContainer{
     display: grid;
     grid-template-columns: 25% 70%;

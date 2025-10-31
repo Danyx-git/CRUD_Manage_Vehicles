@@ -1,0 +1,99 @@
+
+/* CONTENEDOR PRINCIPAL */
+.modify-container {
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid var(--color-border);
+  width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.modify-container h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* TABLA */
+.modify-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.modify-table thead tr {
+  border-bottom: 2px solid var(--color-border);
+}
+
+.modify-table th {
+  font-weight: 600;
+  padding: 12px 8px;
+}
+
+.modify-table td {
+  padding: 12px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modify-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* COLUMNA GARANTÍA */
+.garantia-tag {
+  display: inline-block;
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+}
+
+/* BOTÓN MODIFICAR */
+.modify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modify-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.modify-btn .material-symbols-outlined {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .modify-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modify-table th,
+  .modify-table td {
+    font-size: 0.85rem;
+    padding: 10px 6px;
+  }
+
+  .modify-btn {
+    font-size: 0.85rem;
+  }
+}
